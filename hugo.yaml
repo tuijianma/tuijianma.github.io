@@ -3,6 +3,23 @@
 baseURL: https://tuijianma.github.io/
 title: CODE
 theme: hugo-book
+
+# --- 核心优化设置 (新增) ---
+# 每次构建前自动清空 public 目录，防止旧的搜索 JS 文件堆积
+cleanDestinationDir: true 
+
+# 开启文件压缩，减小网站体积，提升加载速度
+minify:
+  disableXML: false
+  minifyOutput: true
+
+# 允许 Markdown 文件中直接渲染原始 HTML 代码（解除 Raw HTML omitted 警告）
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+# ---------------------------
+
 disableKinds: ["taxonomy", "taxonomyTerm"]
 # themesDir: ../..
 
